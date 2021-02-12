@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: solid red 2px;
+    /* outline: solid red 2px; */
 }
 html{scroll-behavior: smooth;}
 .container{
