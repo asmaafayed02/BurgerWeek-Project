@@ -5,8 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: solid red 2px; */
+    outline: solid red 2px;
 }
+html{scroll-behavior: smooth;}
 .container{
     width: 90%;
     margin: auto;
@@ -32,7 +33,6 @@ header nav{
     justify-content: space-between;
     font-weight: bold;
     font-size: 21px;
-    
 }
 header nav .nav-links .dlivery-number{
     text-align: right;
@@ -40,12 +40,15 @@ header nav .nav-links .dlivery-number{
     font-family: 'Montserrat', sans-serif;
     line-height: 71px;
 }
+
 header nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
+
 header nav ul li{
     margin: 0 30px;
     letter-spacing: 4px;
@@ -79,7 +82,6 @@ header .header-burger .header-burger__week p{
     padding: 8px;
     width: 75%;
     font-style:unset;
-
     
 }
 header .header-burger .header-burger__week h1{
@@ -97,16 +99,56 @@ header .header-burger .header-burger__week h1 span{
     font-size: 56px;
     text-align: right;
 }
-header .header-burger .header-burger__image{
-    width:50%;
-    padding: 0;
-
-
-}
 header .header-burger .header-burger__image img{
-    width: 100%;
-}
+    width: 85%;
+    margin-left: 70px;
+    margin-top: 20px;
+    
 
+}
+/* media quary */
+@media(max-width:992px){
+    header{height: 75vh;}
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav .nav-links .dlivery-number{
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li{display: inline-block;text-decoration: underline;}
+    header nav ul li:first-child,
+    header nav ul li:last-child{
+        margin:0px 30px;
+    }
+    header .header-burger{
+        flex-direction: column;
+        
+    }
+    header .header-burger .header-burger__week h1{
+        font-size: 80px;
+        text-align: center;
+    }
+    header .header-burger .header-burger__image img{
+        display: none;
+    }
+    header .header-burger .header-burger__week p{
+        margin-left: 4rem;
+        text-align: center;
+    }
+
+}
+@media(min-width:992px) and (max-width:1200px){
+    header .header-burger{
+        flex-direction: column;
+    }
+    header .header-burger .header-burger__image img{
+        width: 50%;
+    }
+}
 /* end header */
 /* start burger to try section */
 .try-burger{
@@ -182,6 +224,19 @@ header .header-burger .header-burger__image img{
     border: solid 2px #3d2514;
     transition: ease-in-out all 1.5s;
 }
+/* media query */
+@media(max-width:1200px){
+    .try-burger .container div{
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        padding-top: 4rem;
+    }
+    .try-burger__fresh div:first-child {
+        margin-bottom: 4rem;
+    }
+    
+}
 /* end burger to try section */
 /* start burger menu section */
 .burger-menu{
@@ -206,9 +261,20 @@ header .header-burger .header-burger__image img{
     padding: 12px;
 }
 .burger-menu .burger-menu__description{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content: space-between;
     text-align: center;
+}
+@media(max-width :767px){
+    .burger-menu .burger-menu__description{
+        grid-template-columns: 1fr;  
+    }
+}
+@media(min-width:767px) and (max-width:1200px){
+    .burger-menu .burger-menu__description{
+        grid-template-columns: repeat(2,1fr);  
+    }
 }
 .burger-menu .burger-menu__content:hover{
     transition: all .5s ease-in-out;
@@ -251,43 +317,127 @@ header .header-burger .header-burger__image img{
     transform: scale(.9);
     transition: all .7s ease-in-out;
 }
+
 /* end burgur menu */
 /* start our story section */
 .burger-story{
-    padding: 2rem;
+    margin-top: 4rem;
+    
+    
 }
 .burger-story .container{
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #3d2514;
-    padding: 1rem;
     box-shadow:18.656px 24.758px 21.5px rgba(0,0,0,0.17);
+    overflow: hidden;
 
 }
-.burger-story .container div:first-child{
-    width: 50%;
-    padding: 2rem;
+.burger-story .slides{
+    display: flex;
+    width: 500%;
 }
-.burger-story .container div:first-child span{
+.slides input{
+    display: none;
+}
+.burger-story .burger-story__slide{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    transition: 2s;
+}
+.burger-story .burger-story__slide div:first-child{
+    padding: 2rem;
+    margin-top: 20px;
+    margin-left: 4rem;
+}
+.burger-story .burger-story__slide div:first-child span{
     font-size: 29px;
     letter-spacing: 2px;
     line-height: 46px;
     color: #3d3d3d;
     font-weight: 700;
 }
-.burger-story .container div:first-child h3{
+.burger-story .burger-story__slide div:first-child h3{
     font-size: 42px;
     line-height: 46px;
     font-family: 'Alfa Slab One', cursive ;
     text-transform: uppercase;
 }
-.burger-story .container div:first-child P{
+.burger-story .burger-story__slide div:first-child P{
     font-size: 21px;
     line-height: 33px;
     color: #3d3d3d;
     font-family: 'Montserrat', sans-serif;
     margin-top: 3rem;
+}
+.burger-story .burger-story__slide div:last-child img{
+    padding:1rem;
+}
+
+/* manual navigation */
+.manual-navigation,
+.slides .auto-navigation{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    margin-left: 6rem;
+
+}
+.manual-navigation{
+    margin-top: -40px;
+}
+.slides .auto-navigation {
+    margin-top: 27.3rem;
+}
+.manual-navigation .manual-btn,
+.slides .auto-navigation div{
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    margin-right: 10px;
+    
+
+}
+.manual-navigation .manual-btn{
+    z-index: -1;
+}
+.manual-navigation .manual-btn:hover{
+    background-color: #ffc045;
+}
+#radio1:checked ~ .story-one{
+    margin-left: 0;
+
+}
+#radio2:checked ~ .story-one{
+    margin-left: -20%;
+}
+#radio3:checked ~ .story-one{
+    margin-left: -40%;
+}
+#radio1:checked ~ .auto-navigation .auto-btn1{
+    background-color: #ffc045;
+}
+#radio2:checked ~ .auto-navigation .auto-btn2{
+    background-color: #ffc045;
+}
+#radio3:checked ~ .auto-navigation .auto-btn3{
+    background-color: #ffc045;
+}
+
+/* media query */
+@media(max-width:1200px){
+    .burger-story .burger-story__slide{
+        flex-direction: column;
+    }
+    .burger-story .burger-story__slide div:last-child img{
+        margin: auto 6rem;
+    }
+    .slides .auto-navigation div{
+        margin-top: 20rem;
+        padding-left: 2rem;
+    }
 }
 /* start burger book section */
 .burger-book{
@@ -342,6 +492,41 @@ header .header-burger .header-burger__image img{
     line-height: 46px;
     font-family: 'Alfa Slab One', cursive;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* media query */
+@media(min-width:767px) and (max-width:1200px){
+    .burger-book form input{
+        display: block;
+        margin: 1rem auto;
+        width: 60%;
+    }
+    .burger-book form input[type='number']{margin: auto;}
+    .burger-book form button{
+        width: 50%;
+    }
+
+}
+@media(max-width:767px){
+    .burger-book form{
+        background-color: #ffc045; 
+        padding: 2rem;
+        margin: 2rem;
+        border-radius: 10px;
+    }
+    .burger-book form input{
+        display: block;
+        margin: 1rem auto;
+        width: 100%;
+        background-color: white;
+    }
+    .burger-book form input[type='number']{margin: auto;}
+    .burger-book form button{
+        width: 100%;
+        margin:1rem auto;
+        padding: 10px;
+    }
 }
 /* start footer */
 footer .container{
@@ -393,8 +578,25 @@ footer .footer-copywrite{
 footer .footer-copywrite p{
     font-size: 17px;
     color: #ffffff;
+    padding: 5px;
 }
 footer .footer-copywrite img{
     padding-left: 10px;
+}
+
+/* media query */
+@media(max-width:1200px){
+    footer .about-us{text-align: center;}
+    footer .about-us .about-us__information{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .about-us .about-us__information div:first-child p{
+        width: 100%;
+    }
+    footer .footer-copywrite{
+        flex-direction: column;
+    }
+
 }
 /* end footer */

@@ -19,14 +19,17 @@
                 <div class="nav-links">
                     <div class="dlivery-number">
                         <p>
-                        <img src="images/web5.png" alt="Delivery icon">
-                            Express Delivery +1 234 567 890</p>
+                            <img src="images/web5.png" alt="Delivery icon">
+                            <span>
+                                Express Delivery +1 234 567 890
+                            </span>
+                        </p>
                     </div>
                     <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">menu</a></li>
-                        <li><a href="#">our story</a></li>
-                        <li><a href="#">contact us</a></li>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#our-menu">menu</a></li>
+                        <li><a href="#our-story">our story</a></li>
+                        <li><a href="#contact-us">contact us</a></li>
                     </ul>
                 </div>
              </nav>
@@ -110,16 +113,61 @@
             </div>
         </section>
         <!-- burger story sectio which contain our events -->
-        <section class="burger-story">
+        <section  class="burger-story">
             <div class="container">
-                <div>
-                    <span>Discover</span>
-                    <h3>Upcoming Events</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.            
-                    </p>
+                <div class="slides">
+                    <!-- radio buttons -->
+                    
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                    <!-- all slides -->
+                    <div class="burger-story__slide story-one">
+                        <div>
+                            <span>Discover</span>
+                            <h3>Upcoming Events</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.            
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/web10.jpg" alt="picture for burger sandwitch and french fries">
+                        </div>
+                    </div> 
+                    <div class="burger-story__slide">
+                        <div>
+                            <span>Discover</span>
+                            <h3>last Events</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.            
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/web7.png" alt="picture for burger sandwitch and french fries">
+                        </div>
+                    </div>
+                    <div class="burger-story__slide">
+                        <div>
+                            <span>Discover</span>
+                            <h3>first Events</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.            
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/web10.jpg" alt="picture for burger sandwitch and french fries">
+                        </div>
+                    </div>
+                    <!-- automatic navigation -->
+                    <div class="auto-navigation">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+               
                 </div>
-                <div>
-                    <img src="images/web10.jpg" alt="picture for burger sandwitch and potos">
+                  <!-- manual navgation -->
+                  <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
                 </div>
             </div>
         </section>
@@ -140,32 +188,10 @@
                 </form>
             </div>
         </section>
-        <!-- about us section which contain information about burgur house -->
-        <!-- <section class="about-us">
-            <div class="container">
-                    <div>
-                        <h5><img src="images/web14.png" alt="burger from our upcaming event"></h5>
-                    </div>
-                    <div class="about-us__information">
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viver ra maecenas accumsan lacus vel facilisis</p>
-                        </div>
-                        <div>
-                            <p>
-                                <a href="#"><img src="images/location.png" alt="location icon"></a>
-                                <span>Main Road, Building Name, Country</span>
-                            </p>
-                            <P>
-                                <a href="#"><img src="images/Email.png" alt="email icon"></a>
-                                <span>info@companyname.com</span>
-                            </P>
-                        </div>
-                    </div>
-            </div>
-        </section> -->
     </main>
     <footer>
         <div class="container">
+            <!-- about us section which contain information about this website -->
             <section class="about-us">
                 <div>
                         <div>
@@ -177,11 +203,11 @@
                             </div>
                             <div>
                                 <p>
-                                    <a href="#"><img src="images/location.png" alt="location icon"></a>
+                                    <a href="#"><img src="images/location.svg" alt="location icon"></a>
                                     <span>Main Road, Building Name, Country</span>
                                 </p>
                                 <P>
-                                    <a href="#"><img src="images/Email.png" alt="email icon"></a>
+                                    <a href="#"><img src="images/email.svg" alt="email icon"></a>
                                     <span>info@companyname.com</span>
                                 </P>
                             </div>
@@ -193,13 +219,14 @@
                     <p> &copy; Company Name 2020. All rights reserved.</p>
                 </div>
                 <div>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instgram.png" alt="instgram icon"></a>
-                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook icon"></a>
-                    <a href="https://twitter.com/?lang=ar" target="_blank"><img src="images/twiter.png" alt="twiter icon"></a>
-                    <a href="https://whatsapp.com/" target="_blank"><img src="images/wattsapp.png" alt="wattsapp icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.svg" alt="instgram icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook icon"></a>
+                    <a href="https://twitter.com/?lang=ar" target="_blank"><img src="images/twitter.svg" alt="twiter icon"></a>
+                    <a href="https://whatsapp.com/" target="_blank"><img src="images/wattsapp.svg" alt="wattsapp icon"></a>
                 </div>
             </div>
         </div>
+
     </footer>
     <script src="js/script.js" defer></script>
 </body>
